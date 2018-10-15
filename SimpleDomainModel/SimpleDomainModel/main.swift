@@ -96,24 +96,6 @@ open class Job {
   public enum JobType {
     case Hourly(Double)
     case Salary(Int)
-    
-    func getHourly() -> Double {
-        switch self {
-            case .Hourly(let hourly):
-                return hourly
-            default:
-                return 0.0
-        }
-    }
-    
-    func getSalary() -> Int{
-        switch self {
-            case .Salary(let salary):
-                return salary
-            default:
-                return 0
-        }
-    }
   }
 
   public init(title : String, type : JobType) {
